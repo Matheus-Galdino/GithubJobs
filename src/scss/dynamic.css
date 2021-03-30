@@ -1,0 +1,24 @@
+.dynamic * {
+  color: #334680;
+  word-wrap: break-word;
+}
+
+.dynamic :is(strong, h1, h2, h3, h4, h5) {
+  display: block;
+  margin: 2rem 0 0.5rem;
+}
+
+.dynamic p,
+.dynamic li {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.dynamic ul {
+  list-style: none;
+}
+
+.dynamic a {
+  color: #1e86ff;
+  text-decoration: none;
+}

@@ -1,30 +1,53 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <nav>
+    <router-link to="/"><span>Github</span> Jobs</router-link>
+  </nav>
   <router-view />
+
+  <footer>created by <span>Matheus</span> - devChallenges.io</footer>
 </template>
 
 <style lang="scss">
+@import "./scss/reset.scss";
+@import "./scss/_variables.scss";
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  width: 100%;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+  padding: 1.4rem;
+  background: #f6f7fb;
+
+  @media (min-width: $desktop-breakpoint) {
+    padding: 30px 120px;
+  }
 }
 
-#nav {
-  padding: 30px;
+nav {
+  margin-bottom: 3rem;
 
   a {
-    font-weight: bold;
-    color: #2c3e50;
+    color: $veryDarkBlue;
+    font-size: $heading-fs;
+    text-decoration: none;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    span {
+      font-weight: 700;
     }
+  }
+}
+
+footer {
+  padding: 2.5rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: $lightGray;
+  text-align: center;
+
+  span {
+    font-weight: 700;
   }
 }
 </style>
